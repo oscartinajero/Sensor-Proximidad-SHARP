@@ -11,6 +11,7 @@ Va conectado de la siguiente manera:
 *El cable negro va a GND.
 *El cable amarillo va al Puerto A0.
 
+https://github.com/oscartinajero/Sensor-Proximidad-SHARP/blob/main/img/Sensor-Sharp-En-Arduino.PNG
 
 El Display va conectado de la siguiente manera:
 *El cable amarillo es el SDA. -   Va en el Puerto A4
@@ -18,7 +19,8 @@ El Display va conectado de la siguiente manera:
 *El cable Rojo es VCC.        -   Va a los 5V
 *El cable Negro es GND.       -   Va a GND.
 
+https://github.com/oscartinajero/Sensor-Proximidad-SHARP/blob/main/img/LCD-En_Arduino.PNG
 
 Los LEDs van conectados del puerto 2 al 4, ocupando esos tres lugares, cada LED lleva su propia resistencia de 220 OHMS.
 
-
+https://github.com/oscartinajero/Sensor-Proximidad-SHARP/blob/main/img/LEDs-En-Arduino.PNG
