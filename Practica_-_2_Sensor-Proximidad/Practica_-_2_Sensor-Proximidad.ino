@@ -3,11 +3,7 @@
 LiquidCrystal_I2C lcd(0x27,16,2);
 
 //Variables globales
-int gatillo_sensor = A0;
 float lectura = 1;
-int cm;
-int brillo;
-
 
 void setup() {
   //Comunicasión Serial a 9600 baudios
@@ -25,7 +21,6 @@ void setup() {
  
 void loop() {
   lectura = distancia(20);
-  //cm = pow(3027.4 / sensor, 1.2134);
 
   //LCD
   lcd.setCursor(0,0);
@@ -93,7 +88,7 @@ void loop() {
       digitalWrite(4,LOW);
       delay(100);
     }
-  }
+  }//fuera de rango
   else if(lectura>93){
       digitalWrite(2,HIGH);
       digitalWrite(3,HIGH);
@@ -107,13 +102,13 @@ void loop() {
   
   delay(1000);
 }
-
+//filtro
 int distancia(int n){
   long suma = 0;
   for (int i = 0; i < n; i++){
     suma+=analogRead(A0);
   }
   float adc = suma/n;
-  float distancia_cm = 28940.1 * pow(adc, -1.16);
+  float distancia_cm = 28940.1 * pow(adc, -1.16);//transformación en centimetros
   return(distancia_cm);
 }
